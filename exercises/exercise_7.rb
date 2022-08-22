@@ -10,3 +10,12 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Enter a store name: "
+print "> "
+blah = gets.chomp
+
+store = Store.create(name: blah)
+
+for error in store.errors.group_by_attribute do
+  p error
+end
